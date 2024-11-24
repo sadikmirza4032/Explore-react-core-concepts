@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Counter from './Counter';
+import Team from './Team';
+import Users from './Users';
+import Friends from './Frinds';
 
 function App() {
+function HandleEvent(){
+  alert('hi bro')
+}
+const HandleEvent2 = () =>{
+  alert('book')
+}
+
+const Four = (num) =>{
+ alert(num + 10);
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <h3>React Core Concept part 2</h3>
+   <Friends></Friends>
+   <Users></Users>
+   <Team></Team>
+  <Counter></Counter>
+
+
+
+   <button onClick={HandleEvent}>Click Me</button>
+   <button onClick={HandleEvent2}>Click Me 2</button>
+   <button onClick={() => {alert('third')}}>CLick 3</button>
+   <button onClick={() =>{Four(4)}}>Click 4</button>
+
+   </>
   );
 }
 
